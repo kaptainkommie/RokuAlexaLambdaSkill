@@ -27,6 +27,7 @@ For detailed instructions, check out the blog post on http://reflowster.com/blog
 * Modify RokuLambda/index.js with your application ID (From Alexa Skills Dashboard, step 4 below) 
 
 1. Start the server
+
 	For Manual Execution on your server:
 
 	* Start the Roku control server by running "npm install" and "node server.js" in the RokuControlServer folder
