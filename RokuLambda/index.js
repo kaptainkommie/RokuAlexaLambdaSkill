@@ -1,4 +1,4 @@
-var APP_ID = null; //replace this with your app ID to make use of APP_ID verification
+var APP_ID = "amzn1.ask.skill.2e05ddf7-5b42-4f2f-9501-e10f639043b8"; //replace this with your app ID to make use of APP_ID verification
 
 var AlexaSkill = require("./AlexaSkill");
 var serverinfo = require("./serverinfo");
@@ -8,12 +8,12 @@ if (serverinfo.host == "127.0.0.1") {
     throw "Default hostname found, edit your serverinfo.js file to include your server's external IP address";
 }
 
-var AlexaRoku = function () {
+var roku = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
-AlexaRoku.prototype = Object.create(AlexaSkill.prototype);
-AlexaRoku.prototype.constructor = AlexaRoku;
+roku.prototype = Object.create(AlexaSkill.prototype);
+roku.prototype.constructor = roku;
 
 function sendCommand(path,body,callback) {
     var opt = {
@@ -35,7 +35,32 @@ function sendCommand(path,body,callback) {
     req.end();
 }
 
-AlexaRoku.prototype.intentHandlers = {
+roku.prototype.intentHandlers = {
+    Home: function (intent, session, response) {
+		sendCommand("/roku/home",null,function() {
+			response.tellWithCard("Going Home");
+		});
+    },
+    Amazon: function (intent, session, response) {
+		sendCommand("/roku/amazon",null,function() {
+			response.tellWithCard("Launching Amazon");
+		});
+    },
+    Pandora: function (intent, session, response) {
+		sendCommand("/roku/pandora",null,function() {
+			response.tellWithCard("Launching Pandora");
+		});
+    },
+    Hulu: function (intent, session, response) {
+		sendCommand("/roku/hulu",null,function() {
+			response.tellWithCard("Launching Hulu");
+		});
+    },
+    Plex: function (intent, session, response) {
+		sendCommand("/roku/plex",null,function() {
+			response.tellWithCard("Launching Plex");
+		});
+    },
     PlayLast: function (intent, session, response) {
 		sendCommand("/roku/playlast",null,function() {
 			response.tellWithCard("Playing the last Netflix show you searched");
@@ -77,6 +102,6 @@ AlexaRoku.prototype.intentHandlers = {
 };
 
 exports.handler = function (event, context) {
-    var roku = new AlexaRoku();
-    roku.execute(event, context);
+    var r = new roku();
+    r.execute(event, context);
 };

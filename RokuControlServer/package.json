@@ -8,7 +8,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "git@github.com:julianh2o/RokuAlexaLambdaSkill.git"
+      "url": "git@github.com:jaknoll/RokuAlexaLambdaSkill.git"
     }
   ]
 }
