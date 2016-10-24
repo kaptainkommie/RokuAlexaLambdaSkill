@@ -14,6 +14,4 @@ WORKDIR /tmp
 COPY ./RokuControlServer/ .
 RUN npm install
 
-EXPOSE 1234 
-
 ENTRYPOINT ["node","server.js"]]
