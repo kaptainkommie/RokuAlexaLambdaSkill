@@ -12,9 +12,13 @@ Added commands:  Lauch Plex, Pandora, Hulu, Amazon Video, Home
 
 ## Provides
 
+<<<<<<< HEAD
   * Dockerfile for container creation
   * systemd service file
   * nodejs control server for local device
+=======
+  * nodejs server for controlling the local device
+>>>>>>> 8de46958da83b5e58bd81389e17f87df38a8cc63
   * AWS Lambda code
   * Alexa Skill code
 
@@ -23,6 +27,7 @@ Added commands:  Lauch Plex, Pandora, Hulu, Amazon Video, Home
 For detailed instructions, check out the blog post on http://reflowster.com/blog/2015/07/21/rokuvoicecontrol.html
 
 * Modify RokuControlServer/server.js with the port your want to use
+<<<<<<< HEAD
 * Modify RokuLamba/serverinfo_example.js with your external IP and the port you want to use and rename is serverinfo.js
 * Modify RokuLambda/index.js with your application ID (From Alexa Skills Dashboard, step 4 below) 
 
@@ -38,11 +43,25 @@ For detailed instructions, check out the blog post on http://reflowster.com/blog
 	* sudo systemctl enable roku
 	* sudo systemctl start roku
 
+=======
+* Modify RokuLamba/serverinfo.js with your external IP and the port you want to use
+* Modify RokuLambda/index.js with your application ID (From Alexa Skills Dashboard, step 4 below) 
+
+1. Start the Roku control server by running "npm install" and "node server.js" in the RokuControlServer folder
+>>>>>>> 8de46958da83b5e58bd81389e17f87df38a8cc63
 2. Make this server accessible to the outside world using port forwarding on your router being sure to include the proper port (default: 1234)
 3. Configure Alexa as an event source under the event source tab in the AWS Lambda Function panel. (AWS Lambda Dashboard) - Skip code upload for now
 4. Configure a Alexa Skill using the contents of the RokuSkill folder, the ARN of your above Lambda Function, and the <a href="https://developer.amazon.com/edw/home.html">Alexa Skills Dashboard</a>.
 4. Zip the .js files in RokuLamba up and upload them as a new AWS Lambda Function using the <a href="https://console.aws.amazon.com/lambda">AWS Lambda Dashboard</a>
 
+<<<<<<< HEAD
+=======
+## Contributors
+* jaknoll
+* kaptainkommie
+
+Please feel encouraged to submit pull requests!
+>>>>>>> 8de46958da83b5e58bd81389e17f87df38a8cc63
 
 ## License
 
