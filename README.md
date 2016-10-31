@@ -2,11 +2,11 @@ RokuAlexaLambdaSkill
 ====================
 ## Credits
 
-This project forks from/builds on <a href="https://github.com/julianh2o/RokuAlexaLambdaSkill/blob/master/RokuLambda/index.js">julianh2o/RokuAlexaLambdaSkill</a>
+This project forks from/builds on <a href="https://github.com/julianh2o/RokuAlexaLambdaSkill/blob/master/RokuLambda/index.js">julianh2o/RokuAlexaLambdaSkill</a> and <a href="https://github.com/jaknoll/RokuAlexaLambdaSkill">jaknoll/RokuAlexaLambdaSkill</a>
 
 ## Description
 
-This project provides an Alexa skill to control a local roku device with voice.  See the the blog post below for original content/commands
+This project provides an Alexa skill to control a local Roku device with voice commands using <a href="https://sdkdocs.roku.com/display/sdkdoc/External+Control+Guide">Roku External Controls</a>.  See the the blog post below for original content/commands
 
 Added commands:  Lauch Plex, Pandora, Hulu, Amazon Video, Home
 
@@ -14,7 +14,7 @@ Added commands:  Lauch Plex, Pandora, Hulu, Amazon Video, Home
 
   * Dockerfile for container creation
   * systemd service file
-  * nodejs server for local device
+  * nodejs control server for local device
   * AWS Lambda code
   * Alexa Skill code
 
@@ -23,7 +23,7 @@ Added commands:  Lauch Plex, Pandora, Hulu, Amazon Video, Home
 For detailed instructions, check out the blog post on http://reflowster.com/blog/2015/07/21/rokuvoicecontrol.html
 
 * Modify RokuControlServer/server.js with the port your want to use
-* Modify RokuLamba/serverinfo.js with your external IP and the port you want to use
+* Modify RokuLamba/serverinfo_example.js with your external IP and the port you want to use and rename is serverinfo.js
 * Modify RokuLambda/index.js with your application ID (From Alexa Skills Dashboard, step 4 below) 
 
 1. Start the server
