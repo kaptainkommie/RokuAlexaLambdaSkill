@@ -22,7 +22,7 @@ Added commands:  Lauch Plex, Pandora, Hulu, Amazon Video, Home
 For detailed instructions, check out the blog post on http://reflowster.com/blog/2015/07/21/rokuvoicecontrol.html
 
 * Modify RokuControlServer/server.js with the port your want to use
-* Modify RokuLamba/serverinfo_example.js with your external IP and the port you want to use and rename is serverinfo.js
+* Modify RokuLamba/serverinfo_example.js with your external IP and the port you want to use and rename it to serverinfo.js
 * Modify RokuLambda/index.js with your application ID (From Alexa Skills Dashboard, step 4 below) 
 
 1. Start the server
